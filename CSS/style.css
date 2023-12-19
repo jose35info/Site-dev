@@ -1,0 +1,177 @@
+/* Google fonte */
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:wght@400;600&family=Roboto:wght@100;300;400;700&display=swap');
+:root {
+    --primeira-cor: black;
+    --segunda-cor: brown;
+    --terceira-cor: red;
+    --quarta-cor: #b2b4b6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.box-header {
+    background: var(--quarta-cor);
+    padding: 3rem 0;
+}
+
+.logo {
+    display: none;
+}
+
+img {
+    width: 60px;
+    margin: 2rem 0 0 2rem;
+}
+
+header {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h1::after {
+    content: "World!";
+    border-bottom: 2px solid var(--terceira-cor);
+    margin-left: .5rem;
+    font-size: 4rem;
+    box-sizing: border-box;
+}
+
+.text::before {
+    content: "Devs";
+    text-transform: uppercase;
+    color: var(--segunda-cor);
+    margin-right: .5rem;
+}
+
+h2::first-letter:not(div>h2) {
+    border-bottom: solid 2px var(--terceira-cor);
+    /* First-letter seleciona a primeira letra. Aqui está selecionado todos os h2 menos os que estão nas divs  */
+}
+
+h2:not(div>h2) {
+    font-size: 1.7rem;
+    margin: 3rem 0;
+}
+
+div>p {
+    text-align: justify;
+    padding: 1.5rem;
+}
+
+pre {
+    background-color: #b2b4b6;
+    padding: 2.5rem;
+    border-left: 4px solid var(--segunda-cor);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+article {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.saibamais {
+    text-transform: uppercase;
+    color: blue;
+}
+
+.saibamais>a {
+    background-color: var(--quarta-cor);
+    padding: .3rem .1rem;
+    margin-left: .5rem;
+    list-style: none;
+    text-decoration: none;
+    border-radius: 1.5rem;
+    color: var(--primeira-cor);
+    font-weight: 700;
+}
+
+.saibamais>a:hover {
+    background-color: var(--segunda-cor);
+    transition: 2s;
+}
+
+.box-rodape {
+    width: 100%;
+    margin-top: 3rem;
+    padding: 3.5rem 0;
+    background-color: var(--quarta-cor);
+}
+
+.rodape {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.texto-rodape::before {
+    content: "Dev";
+    color: var(--segunda-cor);
+}
+
+.rodape li,
+a {
+    text-decoration: none;
+    list-style: none;
+    color: var(--primeira-cor);
+    padding: 1rem 0;
+}
+
+.menu {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+@media (min-width: 600px) {
+    .flex-box {
+        display: flex;
+        gap: 1rem;
+    }
+    .box {
+        box-sizing: border-box;
+        border: 1px solid var(--quarta-cor);
+        flex: 1 0 350px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    h2:not(article>h2) {
+        text-align: center;
+        margin-top: 2rem;
+    }
+    pre {
+        background-color: #b2b4b6;
+        padding: 2.5rem;
+        border-left: 4px solid var(--segunda-cor);
+        width: 300px;
+        margin: auto;
+    }
+    .flex-header {
+        display: flex;
+        gap: 2.5rem;
+        align-items: center;
+    }
+    .logo {
+        display: flex;
+        width: 150px;
+        height: 150px;
+        border-radius: 20%;
+        align-items: center;
+        border: 1px solid var(--primeira-cor);
+        padding: 1rem;
+        margin-top: 0;
+    }
+}
